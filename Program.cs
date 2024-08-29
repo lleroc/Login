@@ -19,4 +19,10 @@ namespace Login
             Application.Run(new Form1());
         }
     }
+    public static class ConfiguracionProyecto {
+        public static string usuario { get; set; }
+        public static string rol { get; set; }
+        public static int IDusuario { get; set; }
+    }
+
 }

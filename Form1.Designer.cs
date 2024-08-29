@@ -58,6 +58,7 @@ namespace Login
             this.btn_Guardar.TabIndex = 1;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
+            this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
             // 
             // txt_usuario
             // 
@@ -72,6 +73,7 @@ namespace Login
             this.txt_contrasenia.Location = new System.Drawing.Point(48, 182);
             this.txt_contrasenia.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_contrasenia.Name = "txt_contrasenia";
+            this.txt_contrasenia.PasswordChar = '*';
             this.txt_contrasenia.Size = new System.Drawing.Size(290, 30);
             this.txt_contrasenia.TabIndex = 3;
             // 
@@ -91,9 +93,9 @@ namespace Login
             this.label3.Location = new System.Drawing.Point(43, 26);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(258, 25);
+            this.label3.Size = new System.Drawing.Size(268, 25);
             this.label3.TabIndex = 5;
-            this.label3.Text = "Sistema de Aceso Vehicular";
+            this.label3.Text = "Sistema de Acceso Vehicular";
             // 
             // btn_Cancelar
             // 
@@ -104,12 +106,13 @@ namespace Login
             this.btn_Cancelar.TabIndex = 6;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
+            this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);
             // 
             // lbl_mensaje
             // 
             this.lbl_mensaje.AutoSize = true;
             this.lbl_mensaje.ForeColor = System.Drawing.Color.Red;
-            this.lbl_mensaje.Location = new System.Drawing.Point(44, 299);
+            this.lbl_mensaje.Location = new System.Drawing.Point(22, 291);
             this.lbl_mensaje.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lbl_mensaje.Name = "lbl_mensaje";
             this.lbl_mensaje.Size = new System.Drawing.Size(0, 25);
@@ -119,7 +122,7 @@ namespace Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(443, 379);
+            this.ClientSize = new System.Drawing.Size(388, 394);
             this.Controls.Add(this.lbl_mensaje);
             this.Controls.Add(this.btn_Cancelar);
             this.Controls.Add(this.label3);
@@ -129,9 +132,12 @@ namespace Login
             this.Controls.Add(this.btn_Guardar);
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Control de Acceso";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

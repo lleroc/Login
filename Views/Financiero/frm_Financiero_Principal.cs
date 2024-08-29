@@ -16,5 +16,11 @@ namespace Login.Views.Financiero
         {
             InitializeComponent();
         }
+
+        private void frm_Financiero_Principal_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show(ConfiguracionProyecto.usuario);
+
+        }
     }
 }
