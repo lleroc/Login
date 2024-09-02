@@ -115,6 +115,9 @@
     <EmbeddedResource Include="Views\Financiero\frm_Financiero_Principal.resx">
       <DependentUpon>frm_Financiero_Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Views\Usuarios\frm_Usuarios.resx">
+      <DependentUpon>frm_Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

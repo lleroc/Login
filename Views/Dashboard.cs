@@ -28,6 +28,10 @@ namespace Login.Views
         {
 
             var roles = ConfiguracionProyecto.rol;
+            var nombreusuairo = ConfiguracionProyecto.usuario;
+            var diusaurios = ConfiguracionProyecto.IDusuario;
+
+
             if (roles == "Admin")
             {
                 menu.Items.Add("Usuarios", default(Image), frm_Usuarios_click);
