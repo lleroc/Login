@@ -23,6 +23,8 @@ namespace Login
         public static string usuario { get; set; }
         public static string rol { get; set; }
         public static int IDusuario { get; set; }
+
+       
     }
 
 }
