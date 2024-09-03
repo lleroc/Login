@@ -213,16 +213,18 @@ namespace Login.Models
                 using (var conexion = Conexion.GetConnection())
                 {
                     string consulta = "SELECT * FROM usuario WHERE nombre_usuario = @NombreUsuario AND password = @Password";
-
                     using (var comando = new SqlCommand(consulta, conexion))
                     {
                         comando.Parameters.AddWithValue("@NombreUsuario", nombreUsuario);
                         comando.Parameters.AddWithValue("@Password", password);
-
                         using (var lector = comando.ExecuteReader())
                         {
                             if (lector.Read())
                             {
+
+                                //password de la base no tiene conocimeinto el atacante
+                                //siempre va aser difeernte al password que ingresa por la caja de texto
+
                                 return new UsuariosModel
                                 {
                                     ID = Convert.ToInt32(lector["ID"]),
@@ -251,5 +253,61 @@ namespace Login.Models
                 throw new Exception("Error al autenticar el usuario: " + ex.Message);
             }
         }
+
+        //                                          ' or 1=1 --            123456
+        public  UsuariosModel OtroAutenticar(string nombreUsuario, string password)
+        {
+            try
+            {
+                using (var conexion = Conexion.GetConnection())
+                {
+                                                                                    //' or 1=1 --    
+                    string consulta = "SELECT * FROM usuario WHERE nombre_usuario ='" + nombreUsuario + "'";
+                    using (var comando = new SqlCommand(consulta, conexion))
+                    {
+                        using (var lector = comando.ExecuteReader())
+                        {
+                            if (lector.Read())
+                            {
+                                //md5                       //123
+                                if (lector["password"].ToString() == password)
+                                {
+                                    //password de la base no tiene conocimeinto el atacante
+                                    //siempre va a ser diferente al password que ingresa por la caja de texto
+                                    return new UsuariosModel
+                                    {
+                                        ID = Convert.ToInt32(lector["ID"]),
+                                        NombreUsuario = lector["nombre_usuario"].ToString(),
+                                        Password = lector["password"].ToString(),
+                                        Roles = lector["roles"].ToString()
+                                    };
+                                }
+                                else {
+                                    return null;
+                                }
+
+                               
+                            }
+                            else
+                            {
+                                // Retorna null si las credenciales no son válidas
+                                return null;
+                            }
+                        }
+                    }
+                }
+            }
+            catch (SqlException ex)
+            {
+                // Manejar el error de SQL
+                throw new Exception("Error de SQL al autenticar el usuario: " + ex.Message);
+            }
+            catch (Exception ex)
+            {
+                // Manejar cualquier otro tipo de error
+                throw new Exception("Error al autenticar el usuario: " + ex.Message);
+            }
+        }
+
     }
 }

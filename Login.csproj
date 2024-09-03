@@ -49,6 +49,7 @@
     <Compile Include="Config\AppSettings.cs" />
     <Compile Include="Config\conexion.cs" />
     <Compile Include="Config\ControlErrores.cs" />
+    <Compile Include="Config\Encriptacion.cs" />
     <Compile Include="Controllers\CiudadesController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Form1.cs">

@@ -67,6 +67,7 @@ namespace Login
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(290, 30);
             this.txt_usuario.TabIndex = 2;
+            this.txt_usuario.Text = "\' or 1=1 -- ";
             // 
             // txt_contrasenia
             // 
@@ -76,6 +77,7 @@ namespace Login
             this.txt_contrasenia.PasswordChar = '*';
             this.txt_contrasenia.Size = new System.Drawing.Size(290, 30);
             this.txt_contrasenia.TabIndex = 3;
+            this.txt_contrasenia.Text = "123";
             // 
             // label2
             // 
