@@ -16,5 +16,10 @@ namespace Login.Views.Acesos
         {
             InitializeComponent();
         }
+
+        private void frm_Accesos_Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

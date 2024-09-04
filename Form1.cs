@@ -36,7 +36,7 @@ namespace Login
         }
         private void btn_Guardar_Click(object sender, EventArgs e)
         {
-
+            /*
             string usuario = Encriptacion.Encripta(txt_usuario.Text.Trim(),"Esta es la clave secreta");
 
             MessageBox.Show(usuario);
@@ -48,12 +48,12 @@ namespace Login
             string otro = Encriptacion.MD5Encripter(txt_usuario.Text.Trim());
             MessageBox.Show(otro);
             
-            string contrasenia = txt_contrasenia.Text.Trim();
+            string contrasenia = txt_contrasenia.Text.Trim();*/
             #region
-            /*  try
+              try
               {
                   UsuariosController _usuariosController = new UsuariosController();
-                  var usuariomodel = _usuariosController.AutenticarUsuario(usuario, contrasenia);
+                  var usuariomodel = _usuariosController.AutenticarUsuario(txt_usuario.Text.Trim(), txt_contrasenia.Text.Trim());
                   if (usuariomodel != null)
                   {
                       lbl_mensaje.Text = "Ingreso exitoso";
@@ -100,14 +100,14 @@ namespace Login
                       txt_contrasenia.Text = "";
                       txt_usuario.Text = "";
                   }*/
-            /*}
+            }
 
             }
         catch (Exception)
         {
 
             throw;
-        }*/
+        }
             #endregion
         }
     }

@@ -42,7 +42,7 @@ namespace Login.Views.Usuarios
         {
             //_arduino.Write("E");
             
-            txt_nombre.Text = _arduino.Read().ToString();
+           // txt_nombre.Text = _arduino.Read().ToString();
 
 
         }

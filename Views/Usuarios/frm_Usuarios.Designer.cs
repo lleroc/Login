@@ -175,7 +175,7 @@ namespace Login.Views.Usuarios
             // 
             this.lst_usuarios.FormattingEnabled = true;
             this.lst_usuarios.ItemHeight = 25;
-            this.lst_usuarios.Location = new System.Drawing.Point(428, 103);
+            this.lst_usuarios.Location = new System.Drawing.Point(362, 73);
             this.lst_usuarios.Name = "lst_usuarios";
             this.lst_usuarios.Size = new System.Drawing.Size(284, 304);
             this.lst_usuarios.TabIndex = 13;
@@ -183,7 +183,7 @@ namespace Login.Views.Usuarios
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(423, 75);
+            this.label5.Location = new System.Drawing.Point(357, 45);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(162, 25);
             this.label5.TabIndex = 14;
@@ -193,7 +193,7 @@ namespace Login.Views.Usuarios
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(743, 494);
+            this.ClientSize = new System.Drawing.Size(673, 475);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.lst_usuarios);
             this.Controls.Add(this.label4);

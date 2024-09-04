@@ -110,6 +110,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Views\Acesos\frm_Accesos_Principal.resx">
+      <DependentUpon>frm_Accesos_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Bodega\frm_Bodega_Principal.resx">
+      <DependentUpon>frm_Bodega_Principal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </EmbeddedResource>

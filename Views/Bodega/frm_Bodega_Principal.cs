@@ -16,5 +16,10 @@ namespace Login.Views.Bodega
         {
             InitializeComponent();
         }
+
+        private void frm_Bodega_Principal_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
