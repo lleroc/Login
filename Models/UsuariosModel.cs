@@ -75,11 +75,10 @@ namespace Login.Models
 
                     using (var comando = new SqlCommand(consulta, conexion))
                     {
-                        comando.Parameters.AddWithValue("@ID", usuario.ID);
-                        comando.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario);
-                        comando.Parameters.AddWithValue("@Password", usuario.Password);
-                        comando.Parameters.AddWithValue("@Roles", usuario.Roles);
-
+                        comando.Parameters.AddWithValue("@ID", usuario.ID.ToString());
+                        comando.Parameters.AddWithValue("@NombreUsuario", usuario.NombreUsuario.ToString());
+                        comando.Parameters.AddWithValue("@Password", usuario.Password.ToString());
+                        comando.Parameters.AddWithValue("@Roles", usuario.Roles.ToString());
                         comando.ExecuteNonQuery();
                     }
                 }

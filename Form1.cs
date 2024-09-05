@@ -59,7 +59,7 @@ namespace Login
                       lbl_mensaje.Text = "Ingreso exitoso";
                       this.Hide();
 
-                      ConfiguracionProyecto.IDusuario = usuariomodel.ID;
+                      ConfiguracionProyecto.IDusuario = (int)usuariomodel.ID;
                       ConfiguracionProyecto.usuario = usuariomodel.NombreUsuario;
                       ConfiguracionProyecto.rol = usuariomodel.Roles;
 

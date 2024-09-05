@@ -115,6 +115,7 @@ namespace Login.Views.Usuarios
             this.btn_guardar.TabIndex = 6;
             this.btn_guardar.Text = "Guardar";
             this.btn_guardar.UseVisualStyleBackColor = true;
+            this.btn_guardar.Click += new System.EventHandler(this.btn_guardar_Click);
             // 
             // btn_cancelar
             // 
@@ -179,6 +180,7 @@ namespace Login.Views.Usuarios
             this.lst_usuarios.Name = "lst_usuarios";
             this.lst_usuarios.Size = new System.Drawing.Size(284, 304);
             this.lst_usuarios.TabIndex = 13;
+            this.lst_usuarios.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.lst_usuarios_MouseDoubleClick);
             // 
             // label5
             // 
