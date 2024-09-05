@@ -64,7 +64,10 @@ namespace Login.Views
         private void frm_Usuarios_click(object sender, EventArgs e)
         {
             var roles = ConfiguracionProyecto.rol;
-            if (roles == "Admin")
+
+            frm_Usuarios _Usuarios = new frm_Usuarios();
+            _Usuarios.ShowDialog();
+            /*if (roles == "Admin")
             {
                 Dashboard _dashboard = new Dashboard();
                 this.Hide();
@@ -89,7 +92,7 @@ namespace Login.Views
             else
             {
                 //lbl_mensaje.Text = "Usted no posee el nivel de acceso necesario";
-            }
+            }*/
         }
 
 

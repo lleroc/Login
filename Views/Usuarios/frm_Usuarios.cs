@@ -8,26 +8,42 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO.Ports;
+using Login.Controllers;
+using Login.Models;
 
 namespace Login.Views.Usuarios
 {
     public partial class frm_Usuarios : Form
     {
         SerialPort _arduino;
-        string codigo="";
+
+        UsuariosController _usuariosController = new UsuariosController();
+
         public frm_Usuarios()
         {
             InitializeComponent();
-            _arduino = new SerialPort();
+           /* _arduino = new SerialPort();
             _arduino.PortName = "COM4";
             _arduino.BaudRate = 9600;
-            _arduino.Open();
+            _arduino.Open();*/
 
 
         }
 
         private void frm_Usuarios_Load(object sender, EventArgs e)
         {
+            cargalista();
+        }
+
+        private void cargalista() {
+
+            var listausuarios = _usuariosController.ObtenerTodosLosUsuarios();
+            lst_usuarios.DataSource = null;
+            lst_usuarios.DataSource = listausuarios;
+            lst_usuarios.DisplayMember = "NombreUsuario";
+            lst_usuarios.ValueMember = "ID";
+
+
 
         }
 
