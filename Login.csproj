@@ -74,6 +74,12 @@
     <Compile Include="Views\Bodega\frm_Bodega_Principal.Designer.cs">
       <DependentUpon>frm_Bodega_Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Views\Bodega\frm_nuevo_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Bodega\frm_nuevo_producto.Designer.cs">
+      <DependentUpon>frm_nuevo_producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +121,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Bodega\frm_Bodega_Principal.resx">
       <DependentUpon>frm_Bodega_Principal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Bodega\frm_nuevo_producto.resx">
+      <DependentUpon>frm_nuevo_producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Views\Dashboard.resx">
       <DependentUpon>Dashboard.cs</DependentUpon>
