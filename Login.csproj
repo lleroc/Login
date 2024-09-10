@@ -51,6 +51,9 @@
     <Compile Include="Config\ControlErrores.cs" />
     <Compile Include="Config\Encriptacion.cs" />
     <Compile Include="Controllers\CiudadesController.cs" />
+    <Compile Include="Controllers\ProductosController.cs" />
+    <Compile Include="Controllers\ProveedoresController.cs" />
+    <Compile Include="Controllers\StockController.cs" />
     <Compile Include="Controllers\UsuariosController.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -59,6 +62,9 @@
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\CiudadesModel.cs" />
+    <Compile Include="Models\ProductosModel.cs" />
+    <Compile Include="Models\ProveedoresModel.cs" />
+    <Compile Include="Models\stockModel.cs" />
     <Compile Include="Models\UsuariosModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

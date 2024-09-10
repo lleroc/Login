@@ -150,6 +150,7 @@ namespace Login.Views.Bodega
             this.btnGuardar.TabIndex = 11;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // btnCancelar
             // 
@@ -195,6 +196,7 @@ namespace Login.Views.Bodega
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "frm_nuevo_producto";
             this.Text = "Nuevo producto";
+            this.Load += new System.EventHandler(this.frm_nuevo_producto_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
