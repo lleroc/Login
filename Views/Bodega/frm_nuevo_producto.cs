@@ -39,9 +39,10 @@ namespace Login.Views.Bodega
                 return;           
             }
 
-            var producto = new ProductosModel{ 
-            Codigo_Barras = txtcodigobarras.Text.Trim(),
-            Nombre = txtNombre.Text.Trim()
+            var producto = new ProductosModel
+            {
+                Codigo_Barras = txtcodigobarras.Text.Trim(),
+                Nombre = txtNombre.Text.Trim()
             };
 
             var validaproducto = _productosController.insertar(producto);
@@ -53,39 +54,37 @@ namespace Login.Views.Bodega
             }
 
             //controlador devuelve el producto insertado
-
-
-            var stock = new stockModel {
-            cantidad = Convert.ToInt32(txtcantidad.Text.Trim()),
-            idProducto = producto.IdProducto,
-            idProveedor = Convert.ToInt32(cmbproveedor.SelectedValue),
-           idusuario = ConfiguracionProyecto.IDusuario,
-           unidadmedidad = cmbunidadmedida.SelectedValue.ToString()
-           };
-
+            var stock = new stockModel
+            {
+                cantidad = Convert.ToInt32(txtcantidad.Text.Trim()),
+                idProducto = validaproducto.IdProducto,
+                idProveedor = Convert.ToInt32(cmbproveedor.SelectedValue),
+                idusuario = ConfiguracionProyecto.IDusuario,
+                unidadmedidad = cmbunidadmedida.SelectedItem.ToString()
+            };
             var respuestaStock = _stockController.insertar(stock);
-
             if (respuestaStock.idStock == 0) {
                 ErrorHandler.ManejarErrorGeneral(null, "Ocurrio un error al guardar, consulte m,as tarde, ojala pueda");
                 return;
 
             }
-
             ErrorHandler.ManejarInsertar();
             this.Close();
-
-
         }
 
         private void frm_nuevo_producto_Load(object sender, EventArgs e)
         {
             var proveedores = _proveedoresController.todos();
-
             cmbproveedor.DataSource = null;
             cmbproveedor.DataSource = proveedores;
             cmbproveedor.DisplayMember = "NombreEmpresa";
             cmbproveedor.ValueMember = "IdProveedor";
 
+        }
+
+        private void btnSalir_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

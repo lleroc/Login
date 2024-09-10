@@ -56,11 +56,10 @@ namespace Login.Models
             {
                 using (var conexion = Conexion.GetConnection())
                 {
-                    StringBuilder consulta = new StringBuilder();
-                    consulta.Append("insert into Productos(Nombre, Codigo_Barras)");
-                    consulta.Append("output inserted.IdProducto, inserted.Nombre, inserted.Codigo_Barras");
-                    consulta.Append("values('@Nombre', '@Codigo_Barras')");
-                    using (var comando = new SqlCommand(consulta.ToString(), conexion))
+                    var consulta = "insert into Productos(Nombre, Codigo_Barras) " +
+                    " output inserted.IdProducto, inserted.Nombre, inserted.Codigo_Barras " +
+                    " values(@Nombre, @Codigo_Barras) ";
+                    using (var comando = new SqlCommand(consulta, conexion))
                     {
                         comando.Parameters.AddWithValue("@Nombre", producto.Nombre);
                         comando.Parameters.AddWithValue("@Codigo_Barras", producto.Codigo_Barras);

@@ -23,7 +23,7 @@ namespace Login.Models
             {
                 using (var conexion = Conexion.GetConnection())
                 {
-                    var consulta = "SELECT * FROM productos";
+                    var consulta = "SELECT * FROM Proveedores";
                     using (var comando = new SqlCommand(consulta, conexion))
                     {
                         using (var lector = comando.ExecuteReader())
@@ -32,7 +32,7 @@ namespace Login.Models
                             {
                                 proveedores.Add(new ProveedoresModel
                                 {
-                                    IdProveedor = Convert.ToInt32(lector["IdProveedor"].ToString()),
+                                    IdProveedor = Convert.ToInt32(lector["IdProveedor"]),
                                     NombreEmpresa = lector["NombreEmpresa"].ToString(),
                                     Direccion = lector["Direccion"].ToString(),
                                     Telefono   = lector["Direccion"].ToString(),
@@ -56,6 +56,6 @@ namespace Login.Models
         }
 
 
-        public 
+         
     }
 }

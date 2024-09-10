@@ -30,7 +30,7 @@ namespace Login.Views
             var roles = ConfiguracionProyecto.rol;
             var nombreusuairo = ConfiguracionProyecto.usuario;
             var diusaurios = ConfiguracionProyecto.IDusuario;
-
+            /*
 
             if (roles == "Admin")
             {
@@ -58,14 +58,14 @@ namespace Login.Views
             else
             {
                 menu.Items.Add("Salir", default(Image), frm_Usuarios_click);
-            }
+            }*/
 
         }
         private void frm_Usuarios_click(object sender, EventArgs e)
         {
             var roles = ConfiguracionProyecto.rol;
 
-            frm_Usuarios _Usuarios = new frm_Usuarios();
+           /* frm_Usuarios _Usuarios = new frm_Usuarios();
             _Usuarios.ShowDialog();
             /*if (roles == "Admin")
             {
@@ -104,6 +104,10 @@ namespace Login.Views
 
         }
 
-
+        private void bodegaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frm_Bodega_Principal _frm_Bodega_Principal = new frm_Bodega_Principal();
+            _frm_Bodega_Principal.ShowDialog();
+        }
     }
 }

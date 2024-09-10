@@ -21,5 +21,11 @@ namespace Login.Views.Bodega
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_nuevo_producto _frm_Nuevo_Producto = new frm_nuevo_producto();
+            _frm_Nuevo_Producto.ShowDialog();
+        }
     }
 }

@@ -55,7 +55,7 @@ namespace Login
             this.btn_Guardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Guardar.Name = "btn_Guardar";
             this.btn_Guardar.Size = new System.Drawing.Size(112, 36);
-            this.btn_Guardar.TabIndex = 1;
+            this.btn_Guardar.TabIndex = 3;
             this.btn_Guardar.Text = "Guardar";
             this.btn_Guardar.UseVisualStyleBackColor = true;
             this.btn_Guardar.Click += new System.EventHandler(this.btn_Guardar_Click);
@@ -66,7 +66,7 @@ namespace Login
             this.txt_usuario.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.txt_usuario.Name = "txt_usuario";
             this.txt_usuario.Size = new System.Drawing.Size(290, 30);
-            this.txt_usuario.TabIndex = 2;
+            this.txt_usuario.TabIndex = 1;
             // 
             // txt_contrasenia
             // 
@@ -75,7 +75,7 @@ namespace Login
             this.txt_contrasenia.Name = "txt_contrasenia";
             this.txt_contrasenia.PasswordChar = '*';
             this.txt_contrasenia.Size = new System.Drawing.Size(290, 30);
-            this.txt_contrasenia.TabIndex = 3;
+            this.txt_contrasenia.TabIndex = 2;
             // 
             // label2
             // 
@@ -103,7 +103,7 @@ namespace Login
             this.btn_Cancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btn_Cancelar.Name = "btn_Cancelar";
             this.btn_Cancelar.Size = new System.Drawing.Size(112, 36);
-            this.btn_Cancelar.TabIndex = 6;
+            this.btn_Cancelar.TabIndex = 4;
             this.btn_Cancelar.Text = "Cancelar";
             this.btn_Cancelar.UseVisualStyleBackColor = true;
             this.btn_Cancelar.Click += new System.EventHandler(this.btn_Cancelar_Click);

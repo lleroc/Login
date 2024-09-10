@@ -55,9 +55,9 @@ namespace Login.Views.Usuarios
 
         private void frm_Usuarios_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (_arduino.IsOpen) {
+           /* if (_arduino.IsOpen) {
                 _arduino.Close();
-            }
+            }*/
         }
 
         private void button1_Click(object sender, EventArgs e)

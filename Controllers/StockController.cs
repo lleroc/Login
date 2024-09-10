@@ -12,7 +12,7 @@ namespace Login.Controllers
         stockModel _stockModel = new stockModel();
 
         public stockModel insertar(stockModel stock) {
-            return _stockModel.insertar(stock);
+            return _stockModel.inserat(stock);
         }
        
     }
