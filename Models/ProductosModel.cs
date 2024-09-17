@@ -14,6 +14,9 @@ namespace Login.Models
         public string Nombre { get; set; }
         public string Codigo_Barras { get; set; }
 
+        public int? cantidad { get; set; }
+        public string unidadmedidad { get; set; } = null;
+
 
         public List<ProductosModel> todos() {
             var productos = new List<ProductosModel>();
@@ -21,7 +24,9 @@ namespace Login.Models
             {
                 using (var conexion = Conexion.GetConnection())
                 {
-                    var consulta = "SELECT * FROM productos";
+                    var consulta = "SELECT Productos.Nombre, stock.cantidad, stock.unidadmedidad, " +
+                        "Productos.Codigo_Barras, Productos.IdProducto FROM Productos " +
+                        "INNER JOIN stock ON Productos.IdProducto = stock.idProducto";
                     using (var comando = new SqlCommand(consulta, conexion))
                     {
                         using (var lector = comando.ExecuteReader())
@@ -32,7 +37,9 @@ namespace Login.Models
                                 {
                                    IdProducto = Convert.ToInt32(lector["IdProducto"].ToString()),
                                    Codigo_Barras = lector["Codigo_Barras"].ToString(),
-                                   Nombre = lector["Nombre"].ToString()
+                                   Nombre = lector["Nombre"].ToString(),
+                                   cantidad = Convert.ToInt32(lector["cantidad"].ToString()),
+                                   unidadmedidad = lector["unidadmedidad"].ToString(),
                                 });
                             }
                         }
